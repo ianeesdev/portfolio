@@ -1,9 +1,11 @@
-import React from 'react'
+import Image from "next/image";
 
-const DevImg = () => {
+const DevImg = ({ containerStyles, imgSrc }) => {
   return (
-    <div>DevImg</div>
-  )
-}
+    <div className={`${containerStyles}`}>
+      <Image src={imgSrc} alt="dev" fill priority />
+    </div>
+  );
+};
 
-export default DevImg
+export default DevImg;
