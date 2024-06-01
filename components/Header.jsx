@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-//TODO: Resume from 42:33 on YouTube
+
 // components
 import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
