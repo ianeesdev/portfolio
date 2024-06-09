@@ -141,7 +141,7 @@ const About = () => {
 
           {/* Tabs */}
           <div className="flex-1">
-            <Tabs defaultValue="personal">
+            {/* <Tabs defaultValue="personal">
               <TabsList>
                 <TabsTrigger value="personal">Personal Info</TabsTrigger>
                 <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
@@ -153,7 +153,7 @@ const About = () => {
                 <TabsContent value="qualifications"></TabsContent>
                 <TabsContent value="skills"></TabsContent>
               </div>
-            </Tabs>
+            </Tabs> */}
           </div>
         </div>
       </div>
