@@ -49,7 +49,7 @@ const qualificationData = [
         years: "2020 - 2024",
       },
       {
-        university: "Punjab College of Information & Technology",
+        university: "Punjab College of IT, Rwp",
         qualification: "FSc. Pre-Engineering",
         years: "2018 - 2020",
       },
@@ -162,7 +162,7 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Unmatched Service Quality for over 10 Years
+                      Unmatched Service Quality for over 2 Years
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
                       I specialize in crafting intuitive websites with
