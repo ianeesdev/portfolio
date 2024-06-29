@@ -94,3 +94,15 @@
 .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   @apply bg-primary;
 }
+
+/* .Toastify__progress-bar {
+  @apply bg-primary !important;
+}
+
+.Toastify__progress-bar--bg {
+  @apply bg-secondary !important;
+}
+
+.Toastify__toast-icon svg {
+  @apply fill-primary;
+} */
