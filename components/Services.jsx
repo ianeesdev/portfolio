@@ -10,21 +10,21 @@ import {
 const servicesData = [
   {
     icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-    title: "Web Design",
+    title: "Frontend Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quis nulla accusantium, dolorum omnis delectus.",
+      "I specialize in creating responsive and user-friendly interfaces using React, Redux, Tailwind CSS and other modern frontend technologies. My goal is to deliver seamless and engaging user experiences.",
   },
   {
     icon: <Blocks size={72} strokeWidth={0.8} />,
-    title: "Web Development",
+    title: "Backend Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quis nulla accusantium, dolorum omnis delectus.",
+      "I build robust and scalable backend systems using Node.js, Express, and databases such as MongoDB, and MySQL. My expertise includes creating REST APIs, integrating third-party services, and ensuring data integrity.",
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
-    title: "App Development",
+    title: "Deployment",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quis nulla accusantium, dolorum omnis delectus.",
+      "I manage deployment processes using Docker, AWS (EC2, S3, Elastic Beanstalk), and other DevOps tools to ensure your applications run smoothly and efficiently in production environments.",
   },
 ];
 
@@ -41,7 +41,7 @@ const Services = () => {
             return (
               <Card
                 key={index}
-                className="w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative"
+                className="w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative transition-all duration-500 ease-in-out hover:scale-105"
               >
                 <CardHeader className="text-primary absolute -top-[60px]">
                   <div className="w-[140px] h-[80px] bg-white dark:bg-background flex justify-center items-center">

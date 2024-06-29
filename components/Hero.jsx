@@ -27,10 +27,10 @@ const Hero = () => {
               Hello, My name is Muhammad Anees
             </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              I am a proficient MERN stack developer with a keen eye for detail
-              and a passion for coding. My professional journey is marked by a
-              strong foundation in web technologies and a commitment to
-              continuous learning and improvement.
+              A proficient MERN stack developer with a keen eye for detail
+              and a passion for coding. My journey is marked by a strong
+              foundation in web technologies and a commitment to continuous
+              learning.
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">

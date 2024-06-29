@@ -15,6 +15,7 @@ const Form = () => {
     name: "",
     email: "",
     message: "",
+    honeypot: "",
   });
   const [showConfetti, setShowConfetti] = useState(false);
 
@@ -28,6 +29,9 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (formData.honeypot) {
+      return; // If honeypot field is filled, do nothing
+    }
     setLoading(true);
     setShowConfetti(false);
     try {
@@ -35,14 +39,15 @@ const Form = () => {
       toast.success(message);
       setShowConfetti(true);
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.response?.data?.message || error.message);
     } finally {
       setLoading(false);
       setFormData({
         name: "",
         email: "",
         message: "",
-      })
+        honeypot: "",
+      });
     }
   };
 
@@ -60,6 +65,7 @@ const Form = () => {
   return (
     <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
       {showConfetti && <Confetti numberOfPieces={300} />}
+      <input type="text" id="honeypot" style={{ display: "none" }} onChange={handleChange} value={formData.honeypot} />
       <div className="relative flex items-center">
         <Input
           type="text"
