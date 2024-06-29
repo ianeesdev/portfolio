@@ -18,7 +18,7 @@ const servicesData = [
     icon: <Blocks size={72} strokeWidth={0.8} />,
     title: "Backend Development",
     description:
-      "I build robust and scalable backend systems using Node.js, Express, and databases (MongoDB, MySQL). My expertise includes creating REST APIs, integrating third-party services, and ensuring data integrity.",
+      "I build robust and scalable backend systems using Node.js, Express, and databases (MongoDB, MySQL). My expertise includes creating REST APIs, integrating third-party APIs, and ensuring data integrity.",
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
