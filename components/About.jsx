@@ -54,9 +54,9 @@ const qualificationData = [
         years: "2018 - 2020",
       },
       {
-        university: "Comsats University, Islamabad",
-        qualification: "Bachelor of Computer Science",
-        years: "2020 - 2024",
+        university: "Allied School, P.D.Khan, Jhelum",
+        qualification: "Matriculation",
+        years: "2016 - 2018",
       },
     ],
   },
@@ -87,16 +87,16 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "Front-end Development",
+        name: "Responsive Front-end Development",
       },
       {
-        name: "Back-end Development",
+        name: "Secure and Scalable Back-end Systems",
       },
       {
-        name: "Javascript, Python",
+        name: "Containerization with Docker",
       },
       {
-        name: "HTML, CSS",
+        name: "Cloud Deployment via Vercel & AWS",
       },
     ],
   },
@@ -113,7 +113,43 @@ const skillData = [
         imgPath: "/about/notion.svg",
       },
       {
-        imgPath: "/about/wordpress.svg",
+        imgPath: "/about/react.svg",
+      },
+      {
+        imgPath: "/about/node-js.svg",
+      },
+      {
+        imgPath: "/about/redux.svg",
+      },
+      {
+        imgPath: "/about/tailwind.svg",
+      },
+      {
+        imgPath: "/about/mongodb.svg",
+      },
+      {
+        imgPath: "/about/postgresql.svg",
+      },
+      {
+        imgPath: "/about/nextjs.svg",
+      },
+      {
+        imgPath: "/about/express.svg",
+      },
+      {
+        imgPath: "/about/docker.svg",
+      },
+      {
+        imgPath: "/about/github.svg",
+      },
+      {
+        imgPath: "/about/aws.svg",
+      },
+      {
+        imgPath: "/about/aws-ec2.svg",
+      },
+      {
+        imgPath: "/about/aws-s3.svg",
       },
     ],
   },
@@ -141,19 +177,20 @@ const About = () => {
 
           {/* Tabs */}
           <div className="flex-1">
-            <Tabs defaultValue="personal">
+            <Tabs defaultValue="skills">
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
-                  Personal Info
+                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                  Skills
                 </TabsTrigger>
+
                 <TabsTrigger
                   className="w-[162px] xl:w-auto"
                   value="qualifications"
                 >
                   Qualifications
                 </TabsTrigger>
-                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
-                  Skills
+                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
+                  Personal Info
                 </TabsTrigger>
               </TabsList>
               {/* Tabs content */}
@@ -166,7 +203,7 @@ const About = () => {
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
                       I specialize in crafting intuitive websites with
-                      cutting-edge texhnology, delivering dynamix and engaging
+                      cutting-edge technology, delivering dynamic and engaging
                       user experiences.
                     </p>
                     {/* Icons */}
@@ -276,8 +313,31 @@ const About = () => {
                 <TabsContent value="skills">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-8">What I Use Everyday</h3>
+                    {/* tools */}
+                    <div className="mb-12">
+                      <h4 className="text-xl font-semibold mb-2 xl:text-left">
+                        Tools & Technologies
+                      </h4>
+                      <div className="border-b border-border mb-4"></div>
+                      {/* tool list */}
+                      <div className="flex flex-wrap gap-8 justify-center xl:justify-between">
+                        {getData(skillData, "tools").data.map((item, index) => {
+                          const { imgPath } = item;
+                          return (
+                            <div key={index}>
+                              <Image
+                                src={imgPath}
+                                width={50}
+                                height={50}
+                                alt="tools image"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                     {/* skills */}
-                    <div className="mb-16">
+                    <div>
                       <h4 className="text-xl font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* skill list*/}
@@ -288,37 +348,13 @@ const About = () => {
                             return (
                               <div
                                 key={index}
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                                className="text-center xl:text-left mx-auto xl:mx-0"
                               >
                                 <div className="font-medium">{name}</div>
                               </div>
                             );
                           }
                         )}
-                      </div>
-                    </div>
-
-                    {/* tools */}
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2 xl:text-left">
-                        Tools
-                      </h4>
-                      <div className="border-b border-border mb-4"></div>
-                      {/* tool list */}
-                      <div className="flex gap-x-8 justify-center xl:justify-start">
-                        {getData(skillData, "tools").data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt="tools image"
-                              />
-                            </div>
-                          );
-                        })}
                       </div>
                     </div>
                   </div>

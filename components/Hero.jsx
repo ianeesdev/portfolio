@@ -27,8 +27,10 @@ const Hero = () => {
               Hello, My name is Muhammad Anees
             </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what I engage in professionally.
+              I am a proficient MERN stack developer with a keen eye for detail
+              and a passion for coding. My professional journey is marked by a
+              strong foundation in web technologies and a commitment to
+              continuous learning and improvement.
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -37,9 +39,14 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
-              </Button>
+              <a
+                href="/cv/Muhammad Anees_(Software Engineer)_Resume.pdf"
+                download
+              >
+                <Button variant="secondary" className="gap-x-2">
+                  Download CV <Download size={18} />
+                </Button>
+              </a>
             </div>
             {/* socials */}
             <Socials
@@ -60,16 +67,16 @@ const Hero = () => {
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"
               icon={<RiTodoFill />}
-              endCountNum={20}
-              // endCountText="k"
+              endCountNum={15}
+              endCountText="+"
               badgeText="Finished Projects"
             />
             {/* badge 3 */}
             <Badge
               containerStyles="absolute top-[55%] -right-8"
               icon={<RiTeamFill />}
-              endCountNum={6}
-              // endCountText="k"
+              endCountNum={5}
+              endCountText="+"
               badgeText="Happy Clients"
             />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
