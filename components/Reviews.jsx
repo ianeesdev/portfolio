@@ -33,35 +33,7 @@ const reviewsData = [
     job: "Developer",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta architecto dolorem hic illum libero!",
-  },
-  {
-    avatar: "/reviews/avatar-3.png",
-    name: "John Doe",
-    job: "Developer",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta architecto dolorem hic illum libero!",
-  },
-  {
-    avatar: "/reviews/avatar-4.png",
-    name: "John Doe",
-    job: "Developer",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta architecto dolorem hic illum libero!",
-  },
-  {
-    avatar: "/reviews/avatar-5.png",
-    name: "John Doe",
-    job: "Developer",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta architecto dolorem hic illum libero!",
-  },
-  {
-    avatar: "/reviews/avatar-6.png",
-    name: "John Doe",
-    job: "Developer",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis soluta architecto dolorem hic illum libero!",
-  },
+  }
 ];
 
 const Reviews = () => {
