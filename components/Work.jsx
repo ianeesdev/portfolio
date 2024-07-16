@@ -19,16 +19,25 @@ const projectData = [
   {
     image: "/work/3.png",
     category: "react js",
-    name: "Nexa Website",
+    name: "Photonbrains",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
+    link: "https://photonbrains.com/",
+    github: "/",
+  },
+  {
+    image: "/work/4.png",
+    category: "react js",
+    name: "Allergaurd Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
     github: "/",
   },
   {
-    image: "/work/4.png",
-    category: "react js",
-    name: "Solstice Website",
+    image: "/work/1.png",
+    category: "fullstack",
+    name: "ChadGPT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -37,7 +46,7 @@ const projectData = [
   {
     image: "/work/2.png",
     category: "next js",
-    name: "Lumina Website",
+    name: "High End Care Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -46,7 +55,7 @@ const projectData = [
   {
     image: "/work/1.png",
     category: "next js",
-    name: "Evolve Website",
+    name: "UnitFlix Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -55,7 +64,7 @@ const projectData = [
   {
     image: "/work/3.png",
     category: "next js",
-    name: "Ignite Website",
+    name: "Insetik Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -64,7 +73,7 @@ const projectData = [
   {
     image: "/work/4.png",
     category: "next js",
-    name: "Envision Website",
+    name: "Threads Clone",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -73,7 +82,7 @@ const projectData = [
   {
     image: "/work/1.png",
     category: "fullstack",
-    name: "Serenity Website",
+    name: "Genius - AI Platform",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
@@ -82,16 +91,7 @@ const projectData = [
   {
     image: "/work/1.png",
     category: "fullstack",
-    name: "Nova Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "fullstack",
-    name: "Zenith Website",
+    name: "Be Well",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
