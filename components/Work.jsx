@@ -31,7 +31,7 @@ const projectData = [
     name: "Allergaurd Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
-    link: "/",
+    link: "https://allergaurd-website.vercel.app/",
     github: "/",
   },
   {
@@ -40,22 +40,22 @@ const projectData = [
     name: "ChadGPT",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "next js",
-    name: "High End Care Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
-    link: "/",
+    link: "https://app.chadgpt.com/",
     github: "/",
   },
   {
     image: "/work/1.png",
     category: "next js",
     name: "UnitFlix Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
+    link: "https://unitflix-frontend.vercel.app/",
+    github: "/",
+  },
+  {
+    image: "/work/2.png",
+    category: "next js",
+    name: "High End Care Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!",
     link: "/",
