@@ -1,10 +1,25 @@
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 const ProjectCard = ({ project }) => {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
+  const truncateDescription = (description) => {
+    const words = description.split(" ");
+    if (words.length <= 10 || showFullDescription) {
+      return description;
+    } else {
+      return words.slice(0, 10).join(" ") + "...";
+    }
+  };
+
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
@@ -44,7 +59,17 @@ const ProjectCard = ({ project }) => {
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.description}</p>
+        <p className="text-muted-foreground text-lg">
+          {truncateDescription(project.description)}
+          {project.description.split(" ").length > 15 && (
+            <button
+              className="text-primary ml-2"
+              onClick={toggleDescription}
+            >
+              {showFullDescription ? "Read Less" : "Read More"}
+            </button>
+          )}
+        </p>
       </div>
     </Card>
   );
