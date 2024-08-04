@@ -7,11 +7,14 @@ import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggler";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+
+import useScrollProgress from "@/hooks/useScrollProgress";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
   const pathname = usePathname();
+  const completion = useScrollProgress();
 
   useEffect(() => {
     const scrollYPos = window.addEventListener("scroll", () => {
@@ -30,7 +33,7 @@ const Header = () => {
           : "py-6 dark:bg-transparent"
       } sticky top-0 z-30 transition-all ${pathname === "/" && "bg-[#fef9f5]"}`}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto relative">
         <div className="flex justify-between items-center">
           <Logo />
           <div className="flex items-center gap-x-6">
@@ -48,6 +51,11 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* Scroll Progress Bar */}
+      <span
+        style={{ width: `${completion}%` }}
+        className="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-300"
+      ></span>
     </header>
   );
 };
