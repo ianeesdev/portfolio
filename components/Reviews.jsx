@@ -81,7 +81,7 @@ const Reviews = () => {
           {reviewsData.map((person, index) => {
             return (
               <SwiperSlide key={index}>
-                <Card className="bg-tertiary dark:bg-secondary/40 p-8 min-h-[300px]">
+                <Card className="bg-tertiary dark:bg-secondary/40 p-6 md:p-8 min-h-[300px]">
                   <CardHeader className="p-0 mb-10">
                     <div className="flex items-center gap-x-4">
                       <Image
@@ -92,8 +92,8 @@ const Reviews = () => {
                         priority
                       />
                       <div className="flex flex-col">
-                        <CardTitle>{person.name}</CardTitle>
-                        <p>{person.job}</p>
+                        <CardTitle className="text-[18px] lg:text-[20px] xl:text-2xl">{person.name}</CardTitle>
+                        <p className="text-[14px]">{person.job}</p>
                       </div>
                     </div>
                   </CardHeader>

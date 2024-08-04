@@ -53,14 +53,14 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
+      <div className="h-full px-5 md:px-8 py-6">
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
         <div
           ref={descriptionRef}
-          className={`text-muted-foreground text-lg overflow-hidden transition-all duration-300 ease-in-out ${showFullDescription ? "max-h-[1000px]" : "max-h-[110px]"}`}
+          className={`text-muted-foreground text-lg overflow-hidden transition-all duration-300 ease-in-out ${showFullDescription ? "max-h-[1000px]" : "max-h-[117px]"}`}
         >
           {project.description}
         </div>

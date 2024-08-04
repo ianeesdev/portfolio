@@ -18,7 +18,7 @@ const servicesData = [
     icon: <Blocks className="size-10 md:size-[50px]" strokeWidth={0.8} />,
     title: "Backend Development",
     description:
-      "I build robust and scalable backend systems using Node.js, Express, and databases (MongoDB, MySQL). My expertise includes creating REST APIs, integrating third-party APIs, and ensuring data integrity.",
+      "I build robust and scalable backend systems using Node.js, Express, and MongoDB/MySQL. My expertise includes creating REST APIs, integrating third-party APIs, and ensuring data integrity.",
   },
   {
     icon: <Gem className="size-10 md:size-[50px]" strokeWidth={0.8} />,
@@ -43,8 +43,8 @@ const Services = () => {
                 key={index}
                 className="w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative transition-all duration-500 ease-in-out hover:scale-105"
               >
-                <CardHeader className="text-primary absolute -top-[60px]">
-                  <div className="2-[80px] h-[50px] md:w-[140px] md:h-[80px] bg-white dark:bg-background flex justify-center items-center">
+                <CardHeader className="text-primary absolute -top-[50px] md:-top-[60px]">
+                  <div className="w-[80px] h-[40px] md:w-[140px] md:h-[80px] bg-white dark:bg-background flex justify-center items-center">
                     {item.icon}
                   </div>
                 </CardHeader>
