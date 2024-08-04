@@ -24,7 +24,7 @@ const reviewsData = [
   {
     avatar: "/reviews/avatar-1.png",
     name: "Arooba Mazhar",
-    job: "Marketing Manager",
+    job: "Marketing Manager - LantroTech",
     review:
       "As a marketing manager, I worked closely with Anees during his summer internship at Lantrotech as a web development intern. While students in internships are usually in a learning phase, Anees stood out as a very quick learner who effectively applied the concepts he learned in university. Anees demonstrated exceptional competence in front-end technologies, including HTML, CSS, and JavaScript. His ability to create functional, user-friendly web interfaces greatly enhanced our projects. One of his notable contributions was developing a payment gateway system for our international client, which he worked on alongside our senior web developer. Anees communicated effectively and was a proactive team player, contributing to a positive and productive work environment. His technical skills, strong work ethic, and positive attitude were greatly appreciated by the team. Overall, Anees's contributions were invaluable, and I highly recommend him for any web development role.",
   },
