@@ -69,7 +69,7 @@ const ProjectCard = ({ project }) => {
             className="text-primary"
             onClick={toggleDescription}
           >
-            {showFullDescription ? "Read Less" : "Read More ..."}
+            {showFullDescription ? "Read Less" : "... Read More"}
           </button>
         )}
       </div>
