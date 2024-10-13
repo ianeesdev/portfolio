@@ -64,20 +64,25 @@ const qualificationData = [
     title: "experience",
     data: [
       {
+        company: "DPL, Islamabad",
+        role: "Graduate Trainee Officer",
+        years: "Aug 2024 - Present",
+      },
+      {
         company: "Axontick Technologies, Remote",
         role: "Jnr. Full Stack Engineer",
-        years: "2023 - Present",
+        years: "Nov 2023 - Aug 2024",
       },
       {
         company: "LantroTech, Islamabad",
         role: "Web Development Intern",
-        years: "2023 - 2023",
+        years: "Jul 2023 - Aug 2023",
       },
-      {
-        company: "Bytewise Limited, Remote",
-        role: "MERN Stack Fellow",
-        years: "2023 - 2023",
-      },
+      // {
+      //   company: "Bytewise Limited, Remote",
+      //   role: "MERN Stack Fellow",
+      //   years: "Apr 2023 - Jun 2023",
+      // },
     ],
   },
 ];

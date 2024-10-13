@@ -18,6 +18,8 @@ import Socials from "./Socials";
 import TypewriterComponent from "typewriter-effect";
 
 const Hero = () => {
+  const titles = ["Software Engineer", "MERN Stack", "NEXT JS", ".NET", "Angular", "CI/CD Pipelines", "Kubernetes", "Redis", "WSO2"]
+  
   return (
     <section className="py-12 xl:py-24 h-[88vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
@@ -27,7 +29,7 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               <TypewriterComponent
                 options={{
-                  strings: ["Web Developer", "MERN Stack", "NEXT JS"],
+                  strings: titles,
                   autoStart: true,
                   loop: true,
                   delay: 70,
