@@ -65,7 +65,7 @@ const qualificationData = [
     data: [
       {
         company: "DPL, Islamabad",
-        role: "Graduate Trainee Officer",
+        role: "Software Engineer",
         years: "Aug 2024 - Present",
       },
       {
