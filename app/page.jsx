@@ -1,11 +1,9 @@
-import dynamic from "next/dynamic";
-
-const Hero = dynamic(() => import("@/components/Hero"));
-const About = dynamic(() => import("@/components/About"));
-const Services = dynamic(() => import("@/components/Services"));
-const Work = dynamic(() => import("@/components/Work"));
-const Reviews = dynamic(() => import("@/components/Reviews"));
-const Cta = dynamic(() => import("@/components/Cta"));
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Work from "@/components/Work";
+import Reviews from "@/components/Reviews";
+import Cta from "@/components/Cta";
 
 export default function Home() {
   return (
