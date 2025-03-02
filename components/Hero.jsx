@@ -18,10 +18,10 @@ import Socials from "./Socials";
 import TypewriterComponent from "typewriter-effect";
 
 const Hero = () => {
-  const titles = ["Software Engineer", "MERN Stack", "NEXT JS", ".NET", "Angular", "CI/CD Pipelines", "Kubernetes", "Redis", "WSO2"]
+  const titles = ["Software Engineer", ".NET Core", "MERN Stack", "NEXT JS", "Angular", "CI/CD Pipelines", "Jenkins", "Docker", "Kubernetes", "Redis", "WSO2"]
   
   return (
-    <section className="py-12 xl:py-24 h-[88vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+    <section className="py-12 xl:py-24 h-full xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           {/* Text */}
@@ -100,7 +100,7 @@ const Hero = () => {
         </div>
 
         {/* icon */}
-        <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+        <div className="hidden xl:flex absolute left-2/4 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>
