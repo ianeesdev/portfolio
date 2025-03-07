@@ -18,8 +18,20 @@ import Socials from "./Socials";
 import TypewriterComponent from "typewriter-effect";
 
 const Hero = () => {
-  const titles = ["Software Engineer", ".NET Core", "MERN Stack", "NEXT JS", "Angular", "CI/CD Pipelines", "Jenkins", "Docker", "Kubernetes", "Redis", "WSO2"]
-  
+  const titles = [
+    "Software Engineer",
+    ".NET Core",
+    "MERN Stack",
+    "NEXT JS",
+    "Angular",
+    "CI/CD Pipelines",
+    "Jenkins",
+    "Docker",
+    "Kubernetes",
+    "Redis",
+    "WSO2",
+  ];
+
   return (
     <section className="py-12 xl:py-24 h-full xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
@@ -41,8 +53,8 @@ const Hero = () => {
               Hello, My name is Muhammad Anees
             </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              A skilled MERN stack developer with a solid foundation in web
-              technologies and a dedication to continuous learning.
+              A Software Engineer with a strong foundation in various web
+              technologies and a commitment to continuous learning.
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
