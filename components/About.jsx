@@ -92,16 +92,16 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "Responsive Front-end Development",
+        name: "Modern Responsive Front-End Development",
       },
       {
-        name: "Secure and Scalable Back-end Systems",
+        name: "Scalable & Secure Back-End Systems",
       },
       {
-        name: "Containerization with Docker",
+        name: "Efficient Containerization with Docker",
       },
       {
-        name: "Cloud Deployment via Vercel & AWS",
+        name: "Cloud Deployment on Vercel & AWS",
       },
     ],
   },
