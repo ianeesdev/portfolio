@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
+import { fadeIn, buttonHover, sectionReveal } from "@/utils/animation";
 
 // import swipper react components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,20 +22,31 @@ import { projectData } from "@/lib/constants";
 
 const Work = () => {
   return (
-    <section className="relative mb-12 lg:min-h-[50vh] xl:mb-48">
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={sectionReveal}
+      className="relative mb-12 lg:min-h-[50vh] xl:mb-48"
+    >
       <div className="container mx-auto">
         {/* text */}
-        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start"
+        >
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
-          Explore my recent work and see how I've helped my clients achieve their goals.
+            Explore my recent work and see how I've helped my clients achieve their goals.
           </p>
           <Link href="/projects">
-            <Button>All Projects</Button>
+            <motion.div whileHover="hover" whileTap="tap" variants={buttonHover}>
+              <Button>All Projects</Button>
+            </motion.div>
           </Link>
-        </div>
+        </motion.div>
         {/* slider */}
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <motion.div variants={fadeIn("left", 0.4)} className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
             className="min-h-[570px]"
             slidesPerView={1}
@@ -50,14 +63,14 @@ const Work = () => {
             {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <ProjectCard project={project} />
+                  <ProjectCard project={project} index={index} />
                 </SwiperSlide>
               );
             })}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
