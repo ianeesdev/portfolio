@@ -14,7 +14,7 @@ const Badge = ({ containerStyles, icon, endCountNum, endCountText, badgeText }) 
           rotate: [0, 5, -5, 0],
           transition: { duration: 0.5 },
         }}
-        className="text-3xl text-primary"
+        className="text-2xl text-primary"
       >
         {icon}
       </motion.div>
@@ -23,16 +23,18 @@ const Badge = ({ containerStyles, icon, endCountNum, endCountText, badgeText }) 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl leading-none font-bold text-primary"
+          className="flex items-center text-3xl leading-none font-bold"
         >
-          <CountUp end={endCountNum} delay={1} duration={4} />
-          {endCountText}
+          <span className="gradient-text">
+            <CountUp end={endCountNum} delay={1} duration={4} />
+            {endCountText}
+          </span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-[70px] leading-none text-[15px] font-medium text-black"
+          className="max-w-[70px] leading-none text-[15px] font-medium text-secondary/80"
         >
           {badgeText}
         </motion.div>
