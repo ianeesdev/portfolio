@@ -8,6 +8,11 @@ import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 import { sendEmail } from "@/lib/utils";
 import { toast } from "react-toastify";
 import Confetti from "react-confetti";
+import { motion } from "framer-motion";
+import GlowingButton from "./GlowingButton";
+
+const floatingLabelBase =
+  "absolute left-4 top-1/2 -translate-y-1/2 px-1 text-base pointer-events-none transition-all duration-300 bg-background/70 backdrop-blur-sm";
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
@@ -18,6 +23,7 @@ const Form = () => {
     honeypot: "",
   });
   const [showConfetti, setShowConfetti] = useState(false);
+  const [focus, setFocus] = useState({ name: false, email: false, message: false });
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -27,10 +33,17 @@ const Form = () => {
     }));
   };
 
+  const handleFocus = (e) => {
+    setFocus((prev) => ({ ...prev, [e.target.id]: true }));
+  };
+  const handleBlur = (e) => {
+    setFocus((prev) => ({ ...prev, [e.target.id]: false }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.honeypot) {
-      return; // If honeypot field is filled, do nothing
+      return;
     }
     setLoading(true);
     setShowConfetti(false);
@@ -56,55 +69,140 @@ const Form = () => {
       const timeout = setTimeout(() => {
         setShowConfetti(false);
       }, 5000);
-
-      // Cleanup function to clear the timeout
       return () => clearTimeout(timeout);
     }
   }, [showConfetti]);
 
   return (
-    <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-y-8" onSubmit={handleSubmit}>
       {showConfetti && <Confetti numberOfPieces={300} />}
       <input type="text" id="honeypot" style={{ display: "none" }} onChange={handleChange} value={formData.honeypot} />
-      <div className="relative flex items-center">
+
+      {/* Name Field */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative group"
+      >
         <Input
           type="text"
           id="name"
-          placeholder="Name"
           value={formData.name}
           onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           required={true}
+          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
-        <User className="absolute right-6" size={20} />
-      </div>
-      <div className="relative flex items-center">
+        <label
+          htmlFor="name"
+          className={`${floatingLabelBase} ${
+            focus.name || formData.name
+              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              : "text-muted-foreground/60"
+          }`}
+        >
+          Name
+        </label>
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
+          <User className="text-primary" size={20} />
+        </div>
+      </motion.div>
+
+      {/* Email Field */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="relative group"
+      >
         <Input
           type="email"
           id="email"
-          placeholder="Email"
           value={formData.email}
           onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           required={true}
+          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
-        <MailIcon className="absolute right-6" size={20} />
-      </div>
-      <div className="relative flex items-center">
+        <label
+          htmlFor="email"
+          className={`${floatingLabelBase} ${
+            focus.email || formData.email
+              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              : "text-muted-foreground/60"
+          }`}
+        >
+          Email
+        </label>
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
+          <MailIcon className="text-primary" size={20} />
+        </div>
+      </motion.div>
+
+      {/* Message Field */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="relative group"
+      >
         <Textarea
           id="message"
-          placeholder="Type Your Message Here."
           value={formData.message}
           onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           required={true}
+          className="min-h-[180px] h-36 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 pt-4 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg resize-none"
         />
-        <MessageSquare className="absolute top-4 right-6" size={20} />
-      </div>
-      <Button
-        type="submit"
-        className="flex items-center max-w-[166px] gap-x-1.5"
-        disabled={loading}
+        <label
+          htmlFor="message"
+          className={`${floatingLabelBase} ${
+            focus.message || formData.message
+              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              : "text-muted-foreground/60"
+          }`}
+        >
+          Message
+        </label>
+        <div className="absolute right-4 top-6 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
+          <MessageSquare className="text-primary" size={20} />
+        </div>
+      </motion.div>
+
+      {/* Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="pt-2"
       >
-        {loading ? "Sending..." : "Let's Talk"} <ArrowRightIcon size={20} />
-      </Button>
+        <GlowingButton
+          type="submit"
+          variant="primary"
+          className="h-14 w-full px-8 text-base font-semibold"
+          disabled={loading}
+        >
+          {loading ? (
+            <span className="flex items-center gap-x-2">
+              <motion.span
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                className="size-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full"
+              />
+              Sending...
+            </span>
+          ) : (
+            <>
+              Let's Talk
+              <ArrowRightIcon size={20} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </>
+          )}
+        </GlowingButton>
+      </motion.div>
     </form>
   );
 };
