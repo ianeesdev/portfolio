@@ -93,13 +93,14 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
+          placeholder=" "
           className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
         <label
           htmlFor="name"
           className={`${floatingLabelBase} ${
             focus.name || formData.name
-              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
               : "text-muted-foreground/60"
           }`}
         >
@@ -125,13 +126,14 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
+          placeholder=" "
           className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
         <label
           htmlFor="email"
           className={`${floatingLabelBase} ${
             focus.email || formData.email
-              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
               : "text-muted-foreground/60"
           }`}
         >
@@ -156,13 +158,14 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
+          placeholder=" "
           className="min-h-[180px] h-36 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 pt-4 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg resize-none"
         />
         <label
           htmlFor="message"
           className={`${floatingLabelBase} ${
             focus.message || formData.message
-              ? "-top-2 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
+              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
               : "text-muted-foreground/60"
           }`}
         >
