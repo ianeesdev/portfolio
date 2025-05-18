@@ -93,19 +93,9 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
-          placeholder=" "
-          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
+          placeholder="Name"
+          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
-        <label
-          htmlFor="name"
-          className={`${floatingLabelBase} ${
-            focus.name || formData.name
-              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
-              : "text-muted-foreground/60"
-          }`}
-        >
-          Name
-        </label>
         <div className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
           <User className="text-primary" size={20} />
         </div>
@@ -126,19 +116,9 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
-          placeholder=" "
-          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg"
+          placeholder="Email"
+          className="h-14 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 text-base focus:ring-2 focus:ring-primary/20 shadow-lg"
         />
-        <label
-          htmlFor="email"
-          className={`${floatingLabelBase} ${
-            focus.email || formData.email
-              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
-              : "text-muted-foreground/60"
-          }`}
-        >
-          Email
-        </label>
         <div className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
           <MailIcon className="text-primary" size={20} />
         </div>
@@ -158,19 +138,9 @@ const Form = () => {
           onFocus={handleFocus}
           onBlur={handleBlur}
           required={true}
-          placeholder=" "
-          className="min-h-[180px] h-36 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 pt-4 text-base placeholder:opacity-0 focus:ring-2 focus:ring-primary/20 shadow-lg resize-none"
+          placeholder="Message"
+          className="min-h-[180px] h-36 bg-background/60 border border-primary/20 focus:border-primary/60 transition-all duration-300 rounded-2xl pl-4 pr-14 pt-4 text-base focus:ring-2 focus:ring-primary/20 shadow-lg resize-none"
         />
-        <label
-          htmlFor="message"
-          className={`${floatingLabelBase} ${
-            focus.message || formData.message
-              ? "-top-3 left-3 text-sm text-primary bg-background/90 px-1 py-0.5 rounded transition-all duration-300"
-              : "text-muted-foreground/60"
-          }`}
-        >
-          Message
-        </label>
         <div className="absolute right-4 top-6 size-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-focus-within:from-primary/30 group-focus-within:to-primary/20 transition-colors duration-300">
           <MessageSquare className="text-primary" size={20} />
         </div>
